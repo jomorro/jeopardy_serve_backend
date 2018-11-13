@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid and Cells</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="round-selector-div">
+        <select id="round-selector">
+            <option value="100">Round 1</option>
+            <option value="200">Round 2</option>
+        </select>
+    </div>
+    <!-- <div id="grid-container"> -->
+    <h1>Jeopardy</h1>
+    <h3 id="points"></h3>
+    <div id="jeopardy-game-container"></div>
+    <div class="answer-field">
+        <label for="answer-text">Answer:</label>
+        <input type="text" id="answer-text" name="answer-text">
+    </div>
+    <button id="check-answer-button">Check Answer</button>
+
+    <script src="scripts/grid_and_cell.js"></script>
+    <script src="scripts/jeopardy_grid_and_cell.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+* {
+    --grid-height: 80vh;
+    --cell-dimension: calc(var(--grid-height) / var(--row-count));
+}
+
+body {
+    background-color: #646464;
+    text-align: center;
+}
+
+#round-selector-div {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 30px;
+    width: 70px;
+}
+
+.brightercell {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid white;
+    height: var(--cell-dimension);
+    width: var(--cell-dimension);
+}
+
+.grid {
+    height: var(--grid-height);
+    width: calc(var(--cell-dimension) * var(--column-count));position: relative; 
+    margin: auto;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.cell {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid white;
+    height: var(--cell-dimension);
+    width: var(--cell-dimension);
+    text-align: center;
+    line-height: calc(var(--cell-dimension) / 2);
+    box-sizing: border-box;
+}
+
+.clicked {
+    background-color: #FFFF00;
+}
+
+.question-cell {
+    position: absolute;
+    --top-multiplier: 0;
+    --left-multiplier: 0;
+    top: calc(var(--cell-dimension) * var(--top-multiplier));
+    left: calc(var(--cell-dimension) * var(--left-multiplier));
+    height: var(--cell-dimension);
+    width: var(--cell-dimension);
+    animation-name: questionExpand;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    background-color: #fff; 
+    text-align: center;
+    line-height: 100%;
+}
+
+@keyframes questionExpand {
+    from {
+        /* font-size: 1.5vh; */
+        font-size: 1.2vh;
+        line-height: 2vh;
+    }
+    to {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        font-size: 7vh;
+        /* font-size: scale(600%); */
+        line-height: 12vh;
+    }
+}
